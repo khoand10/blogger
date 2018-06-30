@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout.html}">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard page</title>
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="container" sec:authorize="isAuthenticated()">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title" th:text="${user.name}"/>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 " align="center"><img alt="User Pic" width="200px" height="250px"
+                                                                        th:src="@{/file/__${user.avatar}__}"
+                                                                        class="img-circle img-responsive"></div>
+                    <div class=" col-md-9 col-lg-9 ">
+                        <table class="table table-user-information">
+                            <tbody>
+                            <tr>
+                                <td>Department:</td>
+                                <td th:text="${user.job}"/>
+                            </tr>
+                            <tr>
+                                <td>Age:</td>
+                                <td th:text="${user.age}"/>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td th:text="${user.email}"/>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                        <a href="#" class="btn btn-primary">Update account</a>
+                        <a href="#" class="btn btn-primary">Team Sales Performance</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

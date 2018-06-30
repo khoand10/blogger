@@ -41,3 +41,7 @@ p
 @src/main/java/com/codegym/blogger/controller/HomeController.java,3/5/3511d2ba8a768596302b9cb0891c9a223fc16a72
 e
 5src/main/java/com/codegym/blogger/model/UserForm.java,0/4/0453956eb3827a90088914cdad637c9f875f49cf
+p
+@src/main/java/com/codegym/blogger/controller/BaseController.java,d/a/daa77ad39131b88b1167dbc608139112c9b893fb
+s
+Csrc/main/java/com/codegym/blogger/controller/AccountController.java,6/2/624fc2973bc8a172e84f0ccbb8075b3569e46a46

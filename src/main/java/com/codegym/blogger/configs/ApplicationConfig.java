@@ -1,5 +1,6 @@
 package com.codegym.blogger.configs;
 
+import com.codegym.blogger.until.StorageUtils;
 import nz.net.ultraq.thymeleaf.LayoutDialect;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -100,6 +101,9 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
         registry
                 .addResourceHandler("/assets/**")
                 .addResourceLocations("/assets/");
+        registry
+                .addResourceHandler("/file/**")
+                .addResourceLocations("file:" + StorageUtils.FEATURE_LOCATION + "/");
     }
 
     //JPA configuration
