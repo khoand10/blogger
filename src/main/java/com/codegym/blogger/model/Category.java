@@ -8,7 +8,7 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
     private String name;
     @ManyToOne
     @JoinColumn(name = "creator_id")
@@ -23,11 +23,11 @@ public class Category {
         this.creator = creator;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

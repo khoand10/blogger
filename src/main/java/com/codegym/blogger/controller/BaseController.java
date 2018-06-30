@@ -21,7 +21,6 @@ public class BaseController {
         UserPrincipal userPrincipal = getUserPrincipal();
         Long userPrincipalId = userPrincipal.getId();
         User currentUser = userService.findById(userPrincipalId);
-        System.out.println(currentUser.toString());
         return currentUser;
 
     }
