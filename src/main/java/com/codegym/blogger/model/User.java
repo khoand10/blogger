@@ -2,6 +2,7 @@ package com.codegym.blogger.model;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -17,21 +18,32 @@ public class User {
     public int age;
     public String job;
     public String avatar;
+    @OneToMany
+    private List<Category> categories;
 
     public User(){
     }
 
-    public User(String name, String email, String password, int age, String job, String avatar) {
+    public User(String name, String email, String password, int age, String job, String avatar, List<Category> categories) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.age = age;
         this.job = job;
         this.avatar = avatar;
+        this.categories = categories;
     }
 
     public Long getId() {
         return id;
+    }
+
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
     }
 
     public void setId(Long id) {
