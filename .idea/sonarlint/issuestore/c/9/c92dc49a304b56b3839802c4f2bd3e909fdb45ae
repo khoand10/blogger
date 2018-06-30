@@ -1,0 +1,5 @@
+
+vsquid:S2068"U'password' detected in this expression, review this potentially hardcoded credential.(ÖõÙïÿÿÿÿÿ8˜³øÄ,
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ğ´í„ÿÿÿÿÿ8¬Ì¯øÄ,
+Rsquid:S1854"8Remove this useless assignment to local variable "name".(±®àëıÿÿÿÿ
+Csquid:S1481")Remove this unused "name" local variable.(±®àëıÿÿÿÿ

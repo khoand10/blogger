@@ -1,0 +1,8 @@
+database.driver = com.mysql.cj.jdbc.Driver
+database.url = jdbc:mysql://localhost:3306/blogger
+database.user = root
+database.password = 123456
+
+# Spring Security
+spring.queries.users-query=select email, password from users where email=?
+spring.queries.authorities-query =  select email, 'default' from users where email=?
