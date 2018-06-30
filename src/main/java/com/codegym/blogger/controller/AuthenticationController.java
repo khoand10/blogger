@@ -42,10 +42,20 @@ public class AuthenticationController {
     }
 
     @PostMapping("/register")
-    public ModelAndView saveUser(@ModelAttribute("userForm") UserForm userForm) {
-        ModelAndView modelAndView = new ModelAndView("/users/login");
-        User user = new User();
+    public ModelAndView saveUser(@Valid @ModelAttribute("userForm") UserForm userForm, BindingResult bindingResult) {
 
+        ModelAndView modelAndView = new ModelAndView("/users/login");
+        new UserValidator(userService).validate(userForm, bindingResult);
+
+        if (!bindingResult.hasFieldErrors()) {
+            register(userForm);
+        }
+        modelAndView.setViewName("/users/register");
+        return modelAndView;
+    }
+
+    private void register(UserForm userForm) {
+        User user = new User();
         try {
             String randomCode = UUID.randomUUID().toString();
             String originFileName = userForm.getAvatar().getOriginalFilename();
@@ -63,7 +73,5 @@ public class AuthenticationController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        return modelAndView;
     }
 }

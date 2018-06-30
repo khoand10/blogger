@@ -6,7 +6,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-public class UserValidator implements Validator{
+public class UserValidator implements Validator {
 
     private UserService userService;
 
@@ -24,21 +24,30 @@ public class UserValidator implements Validator{
 
         UserForm user = (UserForm) target;
         String email = user.getEmail();
-        String name = user.getName();
         String password = user.getPassword();
+        int age = user.getAge();
+        String rePassword = user.getRePassword();
+
 
         ValidationUtils.rejectIfEmpty(errors, "email", "email.empty");
-        ValidationUtils.rejectIfEmpty(errors, "phone", "phone.empty");
+        ValidationUtils.rejectIfEmpty(errors, "age", "age.empty");
         ValidationUtils.rejectIfEmpty(errors, "name", "name.empty");
         ValidationUtils.rejectIfEmpty(errors, "password", "password.empty");
+        ValidationUtils.rejectIfEmpty(errors, "rePassword", "rePassword.empty");
+        ValidationUtils.rejectIfEmpty(errors, "avatar", "avatar.empty");
 
-        if(userService.existEmail(email)) {
-            errors.rejectValue("email", "email.exists" );
+        if (userService.existEmail(email)) {
+            errors.rejectValue("email", "email.exists");
         }
-//        if (userService.existPhone(phone)) {
-//            errors.rejectValue("phone", "phone.exists");
-//        }
-        if (password.length() < 6 || password.length() >20){
+        if (password!=null && rePassword!= null && password != rePassword) {
+            errors.rejectValue("rePassword", "rePassword.matches");
+        }
+
+        if (age <= 0) {
+            errors.rejectValue("age", "age.matches");
+        }
+
+        if (password != null && password.length() < 6 || password.length() > 20) {
             errors.rejectValue("password", "password.length");
         }
     }

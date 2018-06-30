@@ -8,12 +8,12 @@ import org.springframework.web.servlet.ModelAndView;
 public class HomeController {
 
     @GetMapping("/")
-    public ModelAndView modelAndView(){
+    public ModelAndView modelAndView() {
         return new ModelAndView("/index");
     }
 
     @GetMapping("/dashboard")
-    public ModelAndView dashboard(){
+    public ModelAndView dashboard() {
         return new ModelAndView("/dashboard");
     }
 

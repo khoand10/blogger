@@ -10,13 +10,8 @@
 <section layout:fragment="content">
     <h2>Sign Up</h2>
 
-    <th:block th:if="${successMessage}">
-        <div class="alert alert-success" role="alert">
-            <p th:text="${successMessage}"></p>
-        </div>
-    </th:block>
-
     <form th:action="@{/register}" th:object="${userForm}" method="post" class="form" enctype="multipart/form-data" >
+
         <div  th:if="${#fields.hasErrors()}" class="alert alert-danger" role="alert">
             <div th:each="error : ${#fields.errors()}" th:text="${error}"></div>
         </div>
@@ -32,7 +27,7 @@
         </div>
         <div class="form-group">
             <label>Age:</label>
-            <input class="form-control" type="text" th:field="*{age}"/>
+            <input class="form-control" type="number" th:field="*{age}"/>
         </div>
         <div class="form-group">
             <label>Job:</label>
