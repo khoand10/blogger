@@ -23,6 +23,14 @@ public class Category {
         this.creator = creator;
     }
 
+    public User getCreator() {
+        return creator;
+    }
+
+    public void setCreator(User creator) {
+        this.creator = creator;
+    }
+
     public Long getId() {
         return id;
     }

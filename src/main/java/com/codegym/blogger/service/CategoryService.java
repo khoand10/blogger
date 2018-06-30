@@ -7,4 +7,5 @@ public interface CategoryService {
 
     Iterable<Category> findAllByCreator(User user);
 
+    void save(Category category);
 }

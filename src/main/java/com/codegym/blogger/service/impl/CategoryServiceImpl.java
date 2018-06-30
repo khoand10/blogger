@@ -21,4 +21,9 @@ public class CategoryServiceImpl implements CategoryService {
     public Iterable<Category> findAllByCreator(User user) {
         return categoryRepository.findAllByCreator(user);
     }
+
+    @Override
+    public void save(Category category) {
+        categoryRepository.save(category);
+    }
 }

@@ -39,7 +39,7 @@ public class UserValidator implements Validator {
         if (userService.existEmail(email)) {
             errors.rejectValue("email", "email.exists");
         }
-        if (password!=null && rePassword!= null && password != rePassword) {
+        if (password != null && !password.equals(rePassword)) {
             errors.rejectValue("rePassword", "rePassword.matches");
         }
 
