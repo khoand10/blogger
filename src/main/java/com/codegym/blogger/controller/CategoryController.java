@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/categories")
-public class CategoryController extends BaseController{
+public class CategoryController extends BaseController {
 
     private CategoryService categoryService;
 
@@ -22,8 +22,8 @@ public class CategoryController extends BaseController{
         this.categoryService = categoryService;
     }
 
-    @GetMapping("/")
-    public ModelAndView listCategory(){
+    @GetMapping("")
+    public ModelAndView listCategory() {
         ModelAndView modelAndView = new ModelAndView("/category/list");
         User user = getUserAuthenticated();
         Iterable<Category> categories = categoryService.findAllByCreator(user);
