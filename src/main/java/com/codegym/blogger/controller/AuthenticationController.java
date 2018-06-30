@@ -43,7 +43,6 @@ public class AuthenticationController {
 
     @PostMapping("/register")
     public ModelAndView saveUser(@ModelAttribute("userForm") UserForm userForm) {
-        //new UserValidator(userService).validate(userForm, bindingResult);
         ModelAndView modelAndView = new ModelAndView("/users/login");
         User user = new User();
 
@@ -55,12 +54,11 @@ public class AuthenticationController {
 
             user.setId(userForm.getId());
             user.setName(userForm.getName());
-            user.setBirthday(userForm.getBirthday());
+            user.setAge(userForm.getAge());
             user.setEmail(userForm.getEmail());
             user.setJob(userForm.getJob());
             user.setPassword(userForm.getPassword());
             user.setAvatar(randomName);
-            System.out.println(user.toString());
             userService.save(user);
         } catch (IOException e) {
             e.printStackTrace();

@@ -24,7 +24,6 @@ public class UserValidator implements Validator{
 
         UserForm user = (UserForm) target;
         String email = user.getEmail();
-        String phone = user.getPhone();
         String name = user.getName();
         String password = user.getPassword();
 
@@ -39,9 +38,6 @@ public class UserValidator implements Validator{
 //        if (userService.existPhone(phone)) {
 //            errors.rejectValue("phone", "phone.exists");
 //        }
-        if (!phone.startsWith("0")){
-            errors.rejectValue("phone", "phone.startsWith");
-        }
         if (password.length() < 6 || password.length() >20){
             errors.rejectValue("password", "password.length");
         }

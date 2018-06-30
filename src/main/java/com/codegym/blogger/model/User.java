@@ -14,20 +14,18 @@ public class User {
     public String name;
     public String email;
     public String password;
-    public String phone;
-    public Date birthday;
+    public int age;
     public String job;
     public String avatar;
 
-    public User() {
+    public User(){
     }
 
-    public User(String name, String email, String password, String phone, Date birthday, String job, String avatar) {
+    public User(String name, String email, String password, int age, String job, String avatar) {
         this.name = name;
         this.email = email;
         this.password = password;
-        this.phone = phone;
-        this.birthday = birthday;
+        this.age = age;
         this.job = job;
         this.avatar = avatar;
     }
@@ -64,20 +62,12 @@ public class User {
         this.password = password;
     }
 
-    public String getPhone() {
-        return phone;
+    public int getAge() {
+        return age;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getJob() {
@@ -94,19 +84,5 @@ public class User {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", phone='" + phone + '\'' +
-                ", birthday=" + birthday +
-                ", job='" + job + '\'' +
-                ", avatar='" + avatar + '\'' +
-                '}';
     }
 }

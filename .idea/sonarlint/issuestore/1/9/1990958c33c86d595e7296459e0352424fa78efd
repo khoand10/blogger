@@ -1,8 +1,8 @@
 
-V
-squid:S106?"9Replace this use of System.out or System.err by a logger.(ê×¼©8¼ŞªşÄ,
 ysquid:UselessImportCheck
 "IRemove this unused import 'org.springframework.validation.BindingResult'.(‹¶¸ùÿÿÿÿ8Š¡ şÄ,
-isquid:CommentedOutCodeLine."<This block of commented-out lines of code should be removed.(‚„É¯8Š¡ şÄ,
-Fsquid:S1148B"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8 š¥şÄ,
 Isquid:S10756"&Remove this hard-coded path-delimiter.(ÄßÕŸÿÿÿÿÿ8Øä şÄ,
+Fsquid:S1148B"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8 š¥şÄ,
+isquid:CommentedOutCodeLine."<This block of commented-out lines of code should be removed.(‚„É¯8Š¡ şÄ,
+V
+squid:S106?"9Replace this use of System.out or System.err by a logger.(ê×¼©8¼ŞªşÄ,

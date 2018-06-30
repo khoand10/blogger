@@ -1,11 +1,11 @@
 
-‹"squid:ClassVariableVisibilityCheck"QMake email a static final constant or non-public and provide accessors if needed.(¾Æ†Ëıÿÿÿÿ8—Æ›şÄ,
-†"squid:ClassVariableVisibilityCheck"QMake phone a static final constant or non-public and provide accessors if needed.(«ç”¤8—Æ›şÄ,
-"squid:ClassVariableVisibilityCheck"TMake password a static final constant or non-public and provide accessors if needed.(¼şòüÿÿÿÿ8—Æ›şÄ,
+‹"squid:ClassVariableVisibilityCheck"QMake email a static final constant or non-public and provide accessors if needed.(¾Æ†Ëıÿÿÿÿ8½üƒÅ,
+fsquid:S00107"BConstructor has 10 parameters, which is greater than 7 authorized.(âÔİ‘øÿÿÿÿ8½üƒÅ,
+‡"squid:ClassVariableVisibilityCheck"RMake avatar a static final constant or non-public and provide accessors if needed.(ßÜğí8½üƒÅ,
 ƒ"squid:ClassVariableVisibilityCheck
-"NMake id a static final constant or non-public and provide accessors if needed.(€÷ëÚ8—Æ›şÄ,
-Š"squid:ClassVariableVisibilityCheck"UMake urlAvatar a static final constant or non-public and provide accessors if needed.(¨øÂº8ú’îÿÄ,
-…"squid:ClassVariableVisibilityCheck"PMake name a static final constant or non-public and provide accessors if needed.( şÍ¾8—Æ›şÄ,
-fsquid:S00107"BConstructor has 10 parameters, which is greater than 7 authorized.(âÔİ‘øÿÿÿÿ8»›şÄ,
-‡"squid:ClassVariableVisibilityCheck"RMake avatar a static final constant or non-public and provide accessors if needed.(ßÜğí8—Æ›şÄ,
-‰"squid:ClassVariableVisibilityCheck"OMake job a static final constant or non-public and provide accessors if needed.(ÇäÙ­şÿÿÿÿ8—Æ›şÄ,
+"NMake id a static final constant or non-public and provide accessors if needed.(€÷ëÚ8½üƒÅ,
+†"squid:ClassVariableVisibilityCheck"QMake phone a static final constant or non-public and provide accessors if needed.(«ç”¤8½üƒÅ,
+…"squid:ClassVariableVisibilityCheck"PMake name a static final constant or non-public and provide accessors if needed.( şÍ¾8½üƒÅ,
+"squid:ClassVariableVisibilityCheck"TMake password a static final constant or non-public and provide accessors if needed.(¼şòüÿÿÿÿ8½üƒÅ,
+‰"squid:ClassVariableVisibilityCheck"OMake job a static final constant or non-public and provide accessors if needed.(ÇäÙ­şÿÿÿÿ8½üƒÅ,
+Š"squid:ClassVariableVisibilityCheck"UMake urlAvatar a static final constant or non-public and provide accessors if needed.(¨øÂº8½üƒÅ,

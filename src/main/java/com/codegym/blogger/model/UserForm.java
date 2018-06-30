@@ -1,9 +1,6 @@
 package com.codegym.blogger.model;
 
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.sql.Date;
 
 public class UserForm {
 
@@ -13,9 +10,7 @@ public class UserForm {
     public String email;
     public String password;
     private String rePassword;
-    public String phone;
-    @DateTimeFormat(pattern = "MM-dd-yyyy")
-    public Date birthday;
+    private int age;
     public String job;
     public MultipartFile avatar;
     public String urlAvatar;
@@ -24,14 +19,13 @@ public class UserForm {
 
     }
 
-    public UserForm(Long id, String name, String email, String password, String rePassword, String phone, Date birthday, String job, MultipartFile avatar, String urlAvatar) {
+    public UserForm(Long id, String name, String email, String password, String rePassword, int age, String job, MultipartFile avatar, String urlAvatar) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
         this.rePassword = rePassword;
-        this.phone = phone;
-        this.birthday = birthday;
+        this.age = age;
         this.job = job;
         this.avatar = avatar;
         this.urlAvatar = urlAvatar;
@@ -85,24 +79,16 @@ public class UserForm {
         this.rePassword = rePassword;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
-
     public String getJob() {
         return job;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public void setJob(String job) {
