@@ -11,7 +11,7 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    private String title;
     @Lob
     private String content;
     private LocalDate created;
@@ -28,7 +28,8 @@ public class Post {
     public Post() {
     }
 
-    public Post(String content, LocalDate created, String feature, int likes, String teaser, List<Comment> comments, User creator) {
+    public Post(String title, String content, LocalDate created, String feature, int likes, String teaser, List<Comment> comments, User creator) {
+        this.title = title;
         this.content = content;
         this.created = created;
         this.feature = feature;
@@ -36,6 +37,14 @@ public class Post {
         this.teaser = teaser;
         this.comments = comments;
         this.creator = creator;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public User getCreator() {

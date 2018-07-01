@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout.html}">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>List post</title>
 </head>
 <body>
+<section layout:fragment="content">
 
+    <div class="main-header row">
+        <div class="col-md-6">
+            <h2 class="title">List post</h2>
+        </div>
+        <div class="col-md-6 text-right">
+            <a href="/posts/create" class="btn btn-primary">Create new post</a>
+        </div>
+    </div>
+
+    <table class="table table-hover">
+        <thead class="thead-light">
+        <tr>
+            <th>Index</th>
+            <th>Title</th>
+            <th>Teaser</th>
+            <th>Image</th>
+            <th>Created</th>
+            <th>Likes</th>
+            <th>View</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="post, inter : ${posts}">
+            <td th:text="${inter.count}"/>
+            <td th:text="${post.title}"/>
+            <td th:text="${post.teaser}"/>
+            <td><img th:height="50px" th:width="80px" th:src="@{/file/__${post.feature}__}"></td>
+            <td th:text="${post.created}"/>
+            <td th:text="${post.likes}"/>
+            <td><a th:href="@{/posts/__${post.id}__/view}">read more</a></td>
+            <td><a th:href="@{/posts/__${post.id}__/edit}">edit</a></td>
+            <td><a th:href="@{/posts/__${post.id}__/delete}"
+                   onclick="return confirm('Are you sure you want to delete this file?');">delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
 </body>
 </html>

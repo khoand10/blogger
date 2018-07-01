@@ -30,6 +30,7 @@ public class PostController extends BaseController {
         ModelAndView modelAndView = new ModelAndView("/post/list");
         User userAuthenticated = getUserAuthenticated();
         Iterable<Post> posts = postService.findAllByCreator(pageable, userAuthenticated);
+        modelAndView.addObject("posts", posts);
         return modelAndView;
 
     }
