@@ -10,13 +10,13 @@
 <section layout:fragment="content">
     <div class="main-header">
         <h2 class="title">Edit category</h2>
+        <a href="/categories" class="btn btn-link">Cancle</a>
     </div>
 
     <th:block th:if="${message}">
         <div th:text="${message}" class="alert alert-success" role="alert">
         </div>
     </th:block>
-
     <form th:object="${category}" method="post">
         <input type="hidden" th:field="*{id}">
         <input type="hidden" th:field="*{creator}">

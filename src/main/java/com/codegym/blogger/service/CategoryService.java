@@ -12,4 +12,6 @@ public interface CategoryService {
     boolean hasCategoryPermission(User user, Category category);
 
     Category findById(Long id);
+
+    void delete(Category category);
 }

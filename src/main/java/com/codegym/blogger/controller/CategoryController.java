@@ -73,4 +73,14 @@ public class CategoryController extends BaseController {
         return modelAndView;
     }
 
+    @GetMapping("/{id}/delete")
+    public ModelAndView deleteCategory(@PathVariable("id") Long id) {
+
+        ModelAndView modelAndView = new ModelAndView();
+        Category category = categoryService.findById(id);
+        categoryService.delete(category);
+        modelAndView.setViewName("redirect:/categories");
+        return modelAndView;
+    }
+
 }
