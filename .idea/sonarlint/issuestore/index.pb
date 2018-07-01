@@ -55,3 +55,13 @@ w
 Gsrc/main/java/com/codegym/blogger/service/impl/CategoryServiceImpl.java,d/6/d6cef5c57b312b46ac04f2b4e32137ad5a50423e
 t
 Dsrc/main/java/com/codegym/blogger/controller/CategoryController.java,f/5/f51531086cd618ee44f12ce4b3fda02d65e905be
+d
+4src/main/java/com/codegym/blogger/model/Comment.java,7/0/708c7b2f053c72d234c5a9e04dc5fc6002b11142
+a
+1src/main/java/com/codegym/blogger/model/Post.java,e/f/ef26ef434ac99190b24446deb4384568666c6641
+p
+@src/main/java/com/codegym/blogger/repository/PostRepository.java,9/2/92e9e04b48f2bd18874d746a5a5cbaf85c45c220
+j
+:src/main/java/com/codegym/blogger/service/PostService.java,3/1/3181b6d0223596be7b38f385b823831cdedb9b59
+s
+Csrc/main/java/com/codegym/blogger/service/impl/PostServiceImpl.java,6/d/6daf09f27bdbbe225434523dc2fc08460dc60459

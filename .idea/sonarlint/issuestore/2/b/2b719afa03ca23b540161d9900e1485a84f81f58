@@ -1,8 +1,9 @@
 
 …"squid:ClassVariableVisibilityCheck"PMake name a static final constant or non-public and provide accessors if needed.( şÍ¾8ûşƒÅ,
 „"squid:ClassVariableVisibilityCheck"OMake age a static final constant or non-public and provide accessors if needed.(×Áò¿8ËÎµŠÅ,
+esquid:S00107!"AConstructor has 9 parameters, which is greater than 7 authorized.(È€õÖùÿÿÿÿ8Æœé Å,
+"squid:ClassVariableVisibilityCheck"TMake password a static final constant or non-public and provide accessors if needed.(¼şòüÿÿÿÿ8ûşƒÅ,
+‰"squid:ClassVariableVisibilityCheck"OMake job a static final constant or non-public and provide accessors if needed.(ÇäÙ­şÿÿÿÿ8¾ìªşÄ,
 Œ"squid:ClassVariableVisibilityCheck"RMake avatar a static final constant or non-public and provide accessors if needed.(üÔûºúÿÿÿÿ8¾ìªşÄ,
 ‹"squid:ClassVariableVisibilityCheck"QMake email a static final constant or non-public and provide accessors if needed.(¾Æ†Ëıÿÿÿÿ8ûşƒÅ,
-‰"squid:ClassVariableVisibilityCheck"OMake job a static final constant or non-public and provide accessors if needed.(ÇäÙ­şÿÿÿÿ8¾ìªşÄ,
 Usquid:UselessImportCheck"*Remove this unused import 'java.sql.Date'.(ÙÀ½Ê8ËÎµŠÅ,
-"squid:ClassVariableVisibilityCheck"TMake password a static final constant or non-public and provide accessors if needed.(¼şòüÿÿÿÿ8ûşƒÅ,
