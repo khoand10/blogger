@@ -26,4 +26,14 @@ public class CategoryServiceImpl implements CategoryService {
     public void save(Category category) {
         categoryRepository.save(category);
     }
+
+    @Override
+    public boolean hasCategoryPermission(User user, Category category) {
+        return user.getId().equals(category.getCreator().getId());
+    }
+
+    @Override
+    public Category findById(Long id) {
+        return categoryRepository.findOne(id);
+    }
 }

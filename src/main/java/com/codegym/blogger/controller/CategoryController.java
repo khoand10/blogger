@@ -6,10 +6,7 @@ import com.codegym.blogger.service.CategoryService;
 import com.codegym.blogger.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -49,6 +46,30 @@ public class CategoryController extends BaseController {
         categoryService.save(category);
         modelAndView.addObject("category", new Category());
         modelAndView.addObject("successMessage", "Create new success");
+        return modelAndView;
+    }
+
+    @GetMapping("/{id}/edit")
+    public ModelAndView showEditForm(@PathVariable("id") Long id) {
+
+        ModelAndView modelAndView = new ModelAndView();
+        Category category = categoryService.findById(id);
+        if (category != null) {
+            modelAndView.setViewName("/category/edit");
+            modelAndView.addObject("category", category);
+        } else {
+            modelAndView.setViewName("/error403");
+        }
+        return modelAndView;
+
+    }
+
+    @PostMapping("/{id}/edit")
+    public ModelAndView edit(@ModelAttribute("category") Category category) {
+        ModelAndView modelAndView = new ModelAndView("/category/edit");
+        categoryService.save(category);
+        modelAndView.addObject("category", category);
+        modelAndView.addObject("message", "Category is updated");
         return modelAndView;
     }
 

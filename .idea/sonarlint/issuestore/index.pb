@@ -45,3 +45,13 @@ p
 @src/main/java/com/codegym/blogger/controller/BaseController.java,d/a/daa77ad39131b88b1167dbc608139112c9b893fb
 s
 Csrc/main/java/com/codegym/blogger/controller/AccountController.java,6/2/624fc2973bc8a172e84f0ccbb8075b3569e46a46
+t
+Dsrc/main/java/com/codegym/blogger/repository/CategoryRepository.java,0/0/000c7abfe2e5ed8873fc947701535fe657b82588
+e
+5src/main/java/com/codegym/blogger/model/Category.java,7/0/7027ad49e973b7a5006fc0d42fa8a3320962decb
+n
+>src/main/java/com/codegym/blogger/service/CategoryService.java,8/c/8ce0a967e53fbb4576797981b3ef9b66783e9e33
+w
+Gsrc/main/java/com/codegym/blogger/service/impl/CategoryServiceImpl.java,d/6/d6cef5c57b312b46ac04f2b4e32137ad5a50423e
+t
+Dsrc/main/java/com/codegym/blogger/controller/CategoryController.java,f/5/f51531086cd618ee44f12ce4b3fda02d65e905be
