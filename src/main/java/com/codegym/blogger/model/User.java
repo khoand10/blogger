@@ -18,13 +18,19 @@ public class User {
     public int age;
     public String job;
     public String avatar;
-    @OneToMany
+    @OneToMany(mappedBy = "creator")
     private List<Category> categories;
+
+    @OneToMany(mappedBy = "commentator")
+    private List<Comment> comments;
+
+    @OneToMany(mappedBy = "creator")
+    private List<Post> posts;
 
     public User(){
     }
 
-    public User(String name, String email, String password, int age, String job, String avatar, List<Category> categories) {
+    public User(String name, String email, String password, int age, String job, String avatar, List<Category> categories, List<Comment> comments, List<Post> posts) {
         this.name = name;
         this.email = email;
         this.password = password;
@@ -32,6 +38,16 @@ public class User {
         this.job = job;
         this.avatar = avatar;
         this.categories = categories;
+        this.comments = comments;
+        this.posts = posts;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 
     public Long getId() {
@@ -98,16 +114,4 @@ public class User {
         this.avatar = avatar;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", age=" + age +
-                ", job='" + job + '\'' +
-                ", avatar='" + avatar + '\'' +
-                '}';
-    }
 }
